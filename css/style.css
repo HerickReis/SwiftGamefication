@@ -1,0 +1,41 @@
+:root{
+  --accent:#6C63FF;
+  --muted:#666;
+  --bg:#f6f7fb;
+  --card:#ffffff;
+  --success:#2ecc71;
+}
+*{box-sizing:border-box}
+body{
+  margin:0;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:var(--bg); color:#111; -webkit-font-smoothing:antialiased;
+}
+.app{display:flex;min-height:100vh}
+/* Sidebar */
+.sidebar{
+  width:280px;background:linear-gradient(180deg,#fff, #fafafa);padding:24px;border-right:1px solid #eee;
+}
+.brand{font-weight:700;color:var(--accent);font-size:18px;margin-bottom:14px}
+.user-card{background:var(--card);padding:14px;border-radius:10px;box-shadow:0 4px 10px rgba(16,24,40,0.04);margin-bottom:18px}
+.user-name{font-weight:700}
+.level{display:flex;align-items:center;gap:8px;margin-top:8px;font-size:14px;color:var(--muted)}
+.progress-small{height:8px;background:#eee;border-radius:999px;overflow:hidden;margin-top:10px}
+.progress-small > i{display:block;height:8px;background:linear-gradient(90deg,var(--accent),#5b8cff)}
+/* Main */
+.main{flex:1;padding:28px;max-width:1200px;margin:0 auto;}
+.topbar{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}
+.card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(16,24,40,0.04)}
+.card h3{margin:0 0 8px 0}
+.tasks-list{display:grid;gap:10px}
+.task{display:flex;justify-content:space-between;align-items:center;padding:12px;background:#f8f9ff;border-radius:8px}
+.task .meta{display:flex;gap:12px;align-items:center}
+.btn{background:var(--accent);color:white;padding:8px 12px;border-radius:8px;border:0;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent);border:1px solid #e6e6ff}
+.footer{margin-top:18px;color:var(--muted);font-size:13px}
+/* Responsive */
+@media (max-width:900px){
+  .app{flex-direction:column}
+  .sidebar{width:100%;display:flex;overflow:auto}
+  .cards{grid-template-columns:repeat(1,1fr)}
+}
