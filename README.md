@@ -1,1 +1,1 @@
-# Protótipo Gamificação — Estrutura do Projeto
+# Protótipo Gamificação
