@@ -6,7 +6,7 @@ export function renderProgress(container, state){
   wrap.innerHTML = `
     <div style="margin-bottom:10px">${completed} de ${total} tarefas concluídas</div>
     <div style="height:18px;background:#eee;border-radius:999px;overflow:hidden">
-      <div style="height:18px;width:${pct}%;background:linear-gradient(90deg,var(--accent),#5b8cff)"></div>
+      <div style="height:18px;width:${pct}%;background:linear-gradient(90deg,var(--light-accent),var(--accent))"></div>
     </div>
     <div style="margin-top:8px;color:var(--muted)">${pct}% concluído</div>
   `;
